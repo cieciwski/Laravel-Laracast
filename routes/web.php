@@ -6,7 +6,7 @@ use App\Http\Controllers\Auth\RegisterUserController;
 use App\Http\Controllers\Auth\SessionsController;
 
 Route::get('/', function(){
-    return 'Welcome to the home page';
+    return 'Placeholder for homepage';
 });
 
 

@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-sm px-6">
+<div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
     <a href="/" class="btn btn-ghost text-xl">Idea</a>
   </div>
@@ -11,16 +11,19 @@
       @endcan
     </ul>
   </div>
-  <div class="navbar-end gap-2">
+  <div class="navbar-end">
     @guest
-        <a href="/register" class="btn btn-ghost">Register</a>
-        <a href="/login" class="btn btn-primary">Log In</a>
+    <a href="/register" class="btn">Register</a>
+    <a href="/login" class="btn btn-secondary">Log In</a>
+      @can('view-admin')
+        <li><a href="/admin">Admin</a></li>
+      @endcan
     @endguest
     @auth
         <form action="/logout" method="POST">
             @csrf
             @method('DELETE')
-            <button class="btn btn-ghost">Log Out</button>
+            <button class="btn">Log Out</button>
         </form>
     @endauth
   </div>
