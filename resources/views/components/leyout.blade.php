@@ -1,6 +1,4 @@
-@props([
-    'title' => 'MyPage'
-])
+@props(['title' => 'MyPage'])
 
 <!DOCTYPE html>
 <html lang="en" data-theme="night">
@@ -16,6 +14,6 @@
 <x-nav/>
     <main class="max-w-3xl mx-auto">
     {{ $slot }}
-    </main>
+</main>
 </body>
 </html>
